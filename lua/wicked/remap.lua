@@ -16,6 +16,10 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half-page jump down" })
 -- Move Page Up
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half-page jump up" })
 
+-- Insert Line
+vim.keymap.set("n", "oo", "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>", { desc = "Insert line below" })
+vim.keymap.set("n", "OO", "<Cmd>call append(line('.')-1, repeat([''], v:count1))<CR>", { desc = "Insert line above" })
+
 -- Search RegEx
 vim.keymap.set("n", "n", "nzzzv", { desc = "Search next" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Search previous" })
