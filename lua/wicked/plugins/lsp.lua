@@ -69,6 +69,18 @@ return {
         require('lspconfig')['rust_analyzer'].setup {
             capabilities = capabilities
         }
+        require('lspconfig')['html'].setup {
+            capabilities = capabilities
+        }
+        require('lspconfig')['htmx'].setup {
+            capabilities = capabilities
+        }
+        require('lspconfig')['cssls'].setup {
+            capabilities = capabilities
+        }
+        require('lspconfig')['emmet_ls'].setup {
+            capabilities = capabilities
+        }
         require('lspconfig')['biome'].setup {
             capabilities = capabilities
         }
