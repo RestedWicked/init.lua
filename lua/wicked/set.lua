@@ -26,3 +26,11 @@ vim.opt.scrolloff = 8
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+
+if os.getenv("WICKED_VIM_MODE") == "OBSIDIAN" then
+    vim.opt.conceallevel = 2
+end
+if os.getenv("WICKED_VIM_MODE") == nil then
+    vim.opt.conceallevel = 0
+end
