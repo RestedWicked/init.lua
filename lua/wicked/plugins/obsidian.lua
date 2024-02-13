@@ -15,6 +15,12 @@ return {
         "hrsh7th/nvim-cmp",
     },
     opts = {
+        workspaces = {
+            {
+                name = "quartz",
+                path = "~/notes/quartz/content",
+            },
+        },
         completion = {
             nvim_cmp = true,
 
