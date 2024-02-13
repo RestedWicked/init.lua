@@ -1,6 +1,14 @@
 return {
     'williamboman/mason.nvim',
     lazy = false,
+    cond = function()
+        if os.getenv("WICKED_VIM_MODE") == "OBSIDIAN" then
+            return false
+        end
+        if os.getenv("WICKED_VIM_MODE") == nil then
+            return true
+        end
+    end,
     dependencies = { "neovim/nvim-lspconfig", "williamboman/mason-lspconfig.nvim", "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "mfussenegger/nvim-lint", "mhartington/formatter.nvim", "hrsh7th/nvim-cmp", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline", "hrsh7th/cmp-vsnip", "hrsh7th/vim-vsnip" },
     config = function()
         require("mason").setup({})
