@@ -12,7 +12,15 @@ return {
     dependencies = { "neovim/nvim-lspconfig", "williamboman/mason-lspconfig.nvim", "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "mfussenegger/nvim-lint", "mhartington/formatter.nvim", "hrsh7th/nvim-cmp", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline", "hrsh7th/cmp-vsnip", "hrsh7th/vim-vsnip" },
     config = function()
         require("mason").setup({})
-        require("mason-lspconfig").setup()
+        require("mason-lspconfig").setup{
+            ensure_installed = {
+                "lua_ls",
+                "html",
+                "cssls",
+                "emmet_ls",
+                "biome"
+            }
+        }
 
         local cmp = require 'cmp'
 

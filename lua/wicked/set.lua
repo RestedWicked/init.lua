@@ -27,6 +27,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+vim.opt.clipboard="unnamedplus"
 
 if os.getenv("WICKED_VIM_MODE") == "OBSIDIAN" then
     vim.opt.conceallevel = 2
