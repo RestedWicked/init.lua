@@ -1,3 +1,4 @@
+require("wicked.filetypes")
 require("wicked.set")
 require("wicked.remap")
 require("wicked.lazy")

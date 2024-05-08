@@ -1,5 +1,6 @@
 -- Space Bar
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Open Explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open explorer" })
@@ -54,5 +55,4 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Create Executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
-
 

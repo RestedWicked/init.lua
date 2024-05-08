@@ -1,6 +1,9 @@
 vim.opt.guicursor = ""
 
-vim.opt.nu = true
+-- Have Nerd Font
+vim.g.have_nerd_font = true
+
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -23,9 +26,12 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
 
 vim.opt.clipboard="unnamedplus"
 
@@ -35,3 +41,4 @@ end
 if os.getenv("WICKED_VIM_MODE") == nil then
     vim.opt.conceallevel = 0
 end
+
