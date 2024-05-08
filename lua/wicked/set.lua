@@ -33,7 +33,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.opt.clipboard="unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 if os.getenv("WICKED_VIM_MODE") == "OBSIDIAN" then
     vim.opt.conceallevel = 2
@@ -41,4 +41,3 @@ end
 if os.getenv("WICKED_VIM_MODE") == nil then
     vim.opt.conceallevel = 0
 end
-

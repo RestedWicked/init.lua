@@ -83,7 +83,6 @@ return {
         require("mason").setup({})
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "rust_analyzer",
                 "lua_ls",
             },
             handlers = {
@@ -158,17 +157,6 @@ return {
             }, {
                 { name = 'cmdline' }
             })
-        })
-
-        vim.diagnostic.config({
-            float = {
-                focusable = false,
-                style = "minimal",
-                border = "rounded",
-                source = "always",
-                header = "",
-                previx = "",
-            },
         })
     end
 }
