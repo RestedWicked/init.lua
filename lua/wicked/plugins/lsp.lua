@@ -110,6 +110,13 @@ return {
             }
         })
 
+        local lsp = require('lspconfig')
+        lsp.gdscript.setup{
+            cmd = {'ncat', '127.0.0.1', '6005'},
+            root_dir = require('lspconfig.util').root_pattern("project.godot", ".git"),
+            filetypes = {'gd', 'gdscript', 'gdscript3' }
+        }
+
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
